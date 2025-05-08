@@ -11,7 +11,7 @@ translation_pipeline = transformers.pipeline(
 with mlflow.start_run():
     model_info = mlflow.transformers.log_model(
         transformers_model=translation_pipeline,
-        name="french_translator",
+        artifact_path="french_translator",
         input_example="Hi there, chatbot!",
     )
 
