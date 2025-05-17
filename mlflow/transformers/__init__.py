@@ -1706,14 +1706,10 @@ def generate_signature_output(pipeline, data, model_config=None, params=None, fl
     from mlflow.transformers import signature
 
     _logger.warning(
-        (
-            "mlflow.transformers.generate_signature_output is deprecated and will be removed "
-            "in a future release. "
-            "Please use the input_example argument when logging a model "
-            "to infer the model signature automatically."
-        ),
-        DeprecationWarning,
-        stacklevel=2,
+        "mlflow.transformers.generate_signature_output is deprecated and will be removed "
+        "in a future release. "
+        "Please use the input_example argument when logging a model "
+        "to infer the model signature automatically."
     )
     
     if not isinstance(pipeline, transformers.Pipeline):
