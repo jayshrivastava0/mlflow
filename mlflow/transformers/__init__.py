@@ -17,7 +17,6 @@ import re
 import shutil
 import string
 import sys
-import warnings
 from collections import namedtuple
 from types import MappingProxyType
 from typing import TYPE_CHECKING, Any, Optional, Union
@@ -1707,7 +1706,7 @@ def generate_signature_output(pipeline, data, model_config=None, params=None, fl
 
     from mlflow.transformers import signature
 
-    warnings.warn(
+    _logger.warning(
         (
             "mlflow.transformers.generate_signature_output is deprecated and will be removed "
             "in a future release. Please use the input_example argument when logging a model "
