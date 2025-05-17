@@ -1701,7 +1701,6 @@ def generate_signature_output(pipeline, data, model_config=None, params=None, fl
     Returns:
         The output from the ``pyfunc`` pipeline wrapper's ``predict`` method
     """
-
     import transformers
 
     from mlflow.transformers import signature
@@ -1709,7 +1708,8 @@ def generate_signature_output(pipeline, data, model_config=None, params=None, fl
     _logger.warning(
         (
             "mlflow.transformers.generate_signature_output is deprecated and will be removed "
-            "in a future release. Please use the input_example argument when logging a model "
+            "in a future release. "
+            "Please use the input_example argument when logging a model "
             "to infer the model signature automatically."
         ),
         DeprecationWarning,
