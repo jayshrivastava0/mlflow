@@ -18,6 +18,7 @@ import re
 import shutil
 import string
 import sys
+import warnings
 from collections import namedtuple
 from types import MappingProxyType
 from typing import TYPE_CHECKING, Any, Optional, Union
@@ -1682,10 +1683,6 @@ def _try_import_conversational_pipeline():
 
 def generate_signature_output(pipeline, data, model_config=None, params=None, flavor_config=None):
     """
-    .. deprecated:: 2.12.0
-        This function is deprecated and will be removed in a future release. Please use the
-        `input_example` argument when logging a model to infer the model signature automatically.
-
     .. deprecated:: 2.12.0
         This function is deprecated and will be removed in a future release. Please use the
         `input_example` argument when logging a model to infer the model signature automatically.
