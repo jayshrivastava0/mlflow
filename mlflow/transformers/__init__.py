@@ -1714,7 +1714,7 @@ def generate_signature_output(pipeline, data, model_config=None, params=None, fl
         "to infer the model signature automatically.",
         category=DeprecationWarning,
     )
-
+    
     if not isinstance(pipeline, transformers.Pipeline):
         raise MlflowException(
             f"The pipeline type submitted is not a valid transformers Pipeline. "
